@@ -1,0 +1,20 @@
+<html>
+<head>
+    <link href="static/video-js.min.css" rel="stylesheet">
+</head>
+<body>
+	<!-- data-setup必须加上 -->
+	<video id="my_video_1" class="video-js vjs-default-skin"
+		preload="auto" autoplay="autoplay" width="320" height="240"
+		data-setup='{}'>
+		<!-- rtmp://[服务器ip]:[服务器rtmp端口]/[application的名字]/[ffmpeg输出的名字] -->
+		<source src="rtmp://127.0.0.1:1935/show/camera_1" type="rtmp/flv">
+	</video>
+
+	<script src="static/video.min.js"></script>
+	<script>
+		// 使用本地的flash播放器
+		videojs.options.flash.swf = "static/video-js.swf";
+	</script>
+</body>
+</html>
